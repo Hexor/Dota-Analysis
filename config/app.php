@@ -12,7 +12,7 @@ return [
     | any other location as required by the application or its packages.
     */
 
-    'name' => 'Laravel',
+    'name' => 'Dota 2 Analysis',
 
     /*
     |--------------------------------------------------------------------------
@@ -183,6 +183,10 @@ return [
 
         Rap2hpoutre\LaravelLogViewer\LaravelLogViewerServiceProvider::class,
         Overtrue\LaravelWechat\ServiceProvider::class,
+        Yajra\Datatables\DatatablesServiceProvider::class,
+        Yuansir\Toastr\ToastrServiceProvider::class,
+
+
 
 
 
@@ -235,6 +239,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'EasyWeChat' => Overtrue\LaravelWechat\Facade::class,
+        'Toastr' => Yuansir\Toastr\Facades\Toastr::class,
 
 
     ],

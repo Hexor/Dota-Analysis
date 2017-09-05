@@ -11,8 +11,17 @@
 |
 */
 
+use Yuansir\Toastr\Facades\Toastr;
+
 Route::get('/', function () {
     return view('welcome');
 });
 
 Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
+
+Route::get('editallhero', function () {
+    return view('editallhero');
+});
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');

@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "2ff451124604cbd29b95ee9318b83fb1",
-    "content-hash": "1c64f99f16ad44a8a9e9b7ff2301e4bd",
+    "hash": "068b00d4649887541fd6375b62a49ac3",
+    "content-hash": "661cfb7557ac42f9ee8b37cd65250cc5",
     "packages": [
         {
             "name": "caouecs/laravel-lang",
@@ -1609,6 +1609,36 @@
             "time": "2017-04-06 08:56:23"
         },
         {
+            "name": "ryan/toastr-for-laravel",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yuansir/toastr-for-laravel5.git",
+                "reference": "b6e6c5577a4031ecad1854df846d447005c47e01"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://files.phpcomposer.com/files/yuansir/toastr-for-laravel5/b6e6c5577a4031ecad1854df846d447005c47e01.zip",
+                "reference": "b6e6c5577a4031ecad1854df846d447005c47e01",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Yuansir\\Toastr\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Ryan",
+                    "email": "yuansir@live.cn"
+                }
+            ],
+            "description": "toastr.js for laravel5",
+            "time": "2017-03-09 02:33:27"
+        },
+        {
             "name": "swiftmailer/swiftmailer",
             "version": "v5.4.6",
             "source": {
@@ -2548,6 +2578,67 @@
                 "environment"
             ],
             "time": "2016-09-01 10:05:43"
+        },
+        {
+            "name": "yajra/laravel-datatables-oracle",
+            "version": "v7.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yajra/laravel-datatables.git",
+                "reference": "ed5b5908c505f89b815a1ef5bcc7cc3f9731d397"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://files.phpcomposer.com/files/yajra/laravel-datatables/ed5b5908c505f89b815a1ef5bcc7cc3f9731d397.zip",
+                "reference": "ed5b5908c505f89b815a1ef5bcc7cc3f9731d397",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/database": "5.4.*",
+                "illuminate/filesystem": "5.4.*",
+                "illuminate/http": "5.4.*",
+                "illuminate/support": "5.4.*",
+                "illuminate/view": "5.4.*",
+                "php": ">=5.6.4"
+            },
+            "require-dev": {
+                "mockery/mockery": "0.9.*",
+                "orchestra/testbench": "^3.4",
+                "phpunit/phpunit": "~5.7"
+            },
+            "suggest": {
+                "league/fractal": "Transform your api response into something you won't hate.",
+                "yajra/laravel-datatables-buttons": "Plugin for server-side exporting of dataTable.",
+                "yajra/laravel-datatables-html": "Plugin for server-side HTML builder of dataTable."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "7.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Yajra\\Datatables\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Arjay Angeles",
+                    "email": "aqangeles@gmail.com"
+                }
+            ],
+            "description": "jQuery DataTables API for Laravel 4|5",
+            "keywords": [
+                "datatables",
+                "jquery",
+                "laravel"
+            ],
+            "time": "2017-02-23 03:11:23"
         }
     ],
     "packages-dev": [
