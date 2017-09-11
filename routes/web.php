@@ -22,6 +22,10 @@ Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
 Route::get('editallhero', function () {
     return view('editallhero');
 });
+
+Route::get('/pickheroes','HeroController@pickIndex');
+Route::post('/calculate','HeroController@calculate');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');

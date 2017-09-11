@@ -1,7 +1,7 @@
 <?php
 
+use App\Facades\PickHero;
 use Illuminate\Http\Request;
-use Yajra\Datatables\Facades\Datatables;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +19,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('/heroes','HeroController@index');
+
+
+Route::post('calculate', 'HeroController@calculate');

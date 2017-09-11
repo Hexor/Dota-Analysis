@@ -84,10 +84,9 @@
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Pick Hero</a>
+                    <a href="/pickhero">Pick Hero</a>
                     <a href="/editallhero">Edit Hero</a>
                     <a href="https://laravel-news.com">Contact Us</a>
-                    {{--<a href="https://forge.laravel.com">Forge</a>--}}
                     <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
             </div>

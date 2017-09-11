@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Facades\PickHero;
 use App\Hero;
 use Illuminate\Http\Request;
 use Yajra\Datatables\Facades\Datatables;
@@ -25,5 +26,24 @@ class HeroController extends Controller
 //        ->removeColumn('avatar')
             ->make(true);
 
+    }
+
+
+    public function pickIndex()
+    {
+        $heroes = Hero::all();
+
+        return view('pickhero', compact('heroes'));
+
+    }
+
+    public function calculate(Request $request)
+    {
+        dump($request->all());
+
+        $teammateList = $request->input('teammate');
+        $enemyList = $request->input('enemy');
+
+        return PickHero::getCalculatedHeroList($teammateList, $enemyList);
     }
 }

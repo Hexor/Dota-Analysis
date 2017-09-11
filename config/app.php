@@ -188,6 +188,7 @@ return [
 
 
 
+        App\Providers\PickHeroServiceProvider::class,
 
 
     ],
@@ -204,6 +205,8 @@ return [
     */
 
     'aliases' => [
+
+        'PickHeroService' => \App\Facades\PickHero::class,
 
         'App' => Illuminate\Support\Facades\App::class,
         'Artisan' => Illuminate\Support\Facades\Artisan::class,
