@@ -98,6 +98,7 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ asset('js/lodash.min.js') }}"></script>
+    <script src="https://cdn.bootcss.com/clipboard.js/1.7.1/clipboard.min.js"></script>
     <script src="https://cdn.bootcss.com/jquery/1.12.3/jquery.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>

@@ -3,6 +3,9 @@
 
 
 @section('content')
+
+
+
     <div id="apps" class="container-fluid ">
 
 
@@ -88,6 +91,16 @@
                         <td>
                             <button v-on:click="setTeammate('{{$hero->id}}', '{{$hero->fullname}}')">友</button>
                             <button v-on:click="setEnemy('{{$hero->id}}', '{{$hero->fullname}}')">敌</button>
+                            <button
+                                    style="margin-bottom: 4px; margin-right: 4px;"
+                                    type="button"
+                                    {{--v-if="showCalculate"--}}
+                                    v-on:click="calculate"
+                                    class="btn btn-primary">
+                                Calculate
+                            </button>
+
+
                         </td>
                     </tr>
                 @endforeach
@@ -131,7 +144,7 @@
                         fullname: fullname
                     })
 
-                    this.teammate = _.uniqBy(this.teammate, 'id')
+                    this.enemy = _.uniqBy(this.enemy, 'id')
                 },
 
                 unsetTeammate: function (id) {
@@ -153,29 +166,23 @@
                     temp_form.method = "post";
                     temp_form.style.display = "none";
 
-                    var opt1 = document.createElement("textarea");
-                    opt1.name = 'teammate'
-
-                    var t = []
                     for (var i=0;i<this.teammate.length;i++)
                     {
-                        t[i] = this.teammate[i].id
+                        var opt1 = document.createElement("textarea");
+                        opt1.name = 'teammate[]'
+
+                        opt1.value = this.teammate[i].id
+                        temp_form.appendChild(opt1);
                     }
-                    opt1.value = t
 
-                    temp_form.appendChild(opt1);
-
-                    var opt2 = document.createElement("textarea");
-                    opt2.name = 'enemy'
-
-                    var t = []
                     for (var i=0;i<this.enemy.length;i++)
                     {
-                        t[i] = this.enemy[i].id
-                    }
-                    opt2.value = t
+                        var opt2 = document.createElement("textarea");
+                        opt2.name = 'enemy[]'
 
-                    temp_form.appendChild(opt2);
+                        opt2.value = this.enemy[i].id
+                        temp_form.appendChild(opt2);
+                    }
 
                     document.body.appendChild(temp_form);
                     //提交数据

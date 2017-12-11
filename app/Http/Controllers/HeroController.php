@@ -39,11 +39,11 @@ class HeroController extends Controller
 
     public function calculate(Request $request)
     {
-        dump($request->all());
-
         $teammateList = $request->input('teammate');
         $enemyList = $request->input('enemy');
 
-        return PickHero::getCalculatedHeroList($teammateList, $enemyList);
+        $heroes = PickHero::getCalculatedHeroList($teammateList, $enemyList);
+
+        return view('pickresult', compact('heroes'));
     }
 }
